@@ -1,0 +1,32 @@
+<html>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+	<title>CHEN INDEX</title>
+	<body>
+		<p class="text-center">
+		<div class="row">
+
+			<div class="col-md-6">
+				<img class="member_icon img-circle" height = 50% src="/static/img/members/{{ member.get('image') }}">
+				<p><h2><em>This is {{ member_name }} Chen, though more commonly known as "{{ member.get('nickname')}}"</em></h2>
+				{{ member.get('pronoun')}} was born in {{ member.get('birthyear')}} and works as a {{ member.get('job')}}. {{ member.get('pronoun')}} enjoys spending time {{ member.get('likes')}}. 
+
+				<br><br>Most importantly, our tradition together is that {{ member.get('tradition')}}. 
+
+			</div>
+
+<!--			<div class="col-md-6"> 
+				{% if member_name == 'Shienkun' %}
+				<img class="souplantation img-circle" height = 90% src="/static/img/members/babyatdinner.png }}">
+
+				{% else %}
+				
+		
+				{% endif %}
+			</div> -->
+
+		</div>
+	</p>
+	</body>
+</html>

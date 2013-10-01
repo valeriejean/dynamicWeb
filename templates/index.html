@@ -1,0 +1,28 @@
+<html>
+	<title>CHEN INDEX</title>
+	<body><p class="text-success text-center">
+			<h1>My Immediate Chen Family</h1>
+			<p><em>There are countless Chens in the world, but these ones are my favorites</em></p>
+
+			<div class="col-md-6"> 
+			<form method="POST" action="/thischen">
+				<label for="member">Choose-A-Chen</label>
+				<p>
+				
+				{% for name, info in members.items() %}
+				<label class="radio">
+					<input type="radio" name="member" value="{{ name }}">
+					{{ info.get('role') }}
+					<br>
+				</label>
+				{% endfor %}
+
+				<p>
+				<input type="submit" value="Meet" class="btn btn-large btn-default"/>
+			</form>
+
+	<a href= '/kill'>Don't care! Break this page!</a>
+
+	</p>
+	</body>
+</html>
